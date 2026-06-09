@@ -1,0 +1,36 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="crossattn-deephybridcpi",
+    description="Bidirectional Cross-Attention Deep Hybrid Model for Compound-Protein Interaction Prediction",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    packages=find_packages(),
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Topic :: Scientific/Engineering :: Bio-Informatics",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    ],
+    python_requires=">=3.8",
+    install_requires=[
+        "torch>=2.0.0",
+        "torch-geometric>=2.3.0",
+        "pandas>=1.5.0",
+        "numpy>=1.23.0",
+        "scikit-learn>=1.2.0",
+        "matplotlib>=3.6.0",
+        "seaborn>=0.12.0",
+        "tqdm>=4.65.0",
+        "rdkit>=2023.3.0",
+        "fair-esm>=2.0.0",
+        "transformers>=4.30.0",
+        "umap-learn>=0.5.5",
+        "pyyaml>=6.0",
+    ],
+)
