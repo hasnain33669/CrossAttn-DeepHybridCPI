@@ -20,6 +20,22 @@ CrossAttn-DeepHybridCPI is a deep learning framework for predicting compound-pro
 ### Prerequisites
 - Python 3.8 or higher
 - CUDA-capable GPU 
+### requirements.txt
+
+```txt
+torch>=2.0.0
+torch-geometric>=2.3.0
+pandas>=1.5.0
+numpy>=1.23.0
+scikit-learn>=1.2.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+tqdm>=4.65.0
+rdkit>=2023.3.0
+fair-esm>=2.0.0
+transformers>=4.30.0
+umap-learn>=0.5.5
+pyyaml>=6.0
 
 ### Setup
 
@@ -40,29 +56,29 @@ python scripts/evaluate_model.py --model_path saved_models/best_model.pt --test_
 ### Project Structure
 text
 CrossAttn-DeepHybridCPI/
-├── README.md              # Project documentation
-├── requirements.txt       # Python dependencies
-├── setup.py              # Package setup script
-├── LICENSE               # MIT License
-├── .gitignore            # Git ignore file
+├── README.md              
+├── requirements.txt       
+├── setup.py              
+├── LICENSE               
+├── .gitignore            
 ├── config/
-│   └── config.yaml       # Configuration file
+│   └── config.yaml       
 ├── src/
 │   ├── __init__.py
-│   ├── data_loader.py    # Data loading utilities
-│   ├── model.py          # Model architecture
-│   ├── train.py          # Training functions
-│   ├── evaluate.py       # Evaluation metrics
-│   └── utils.py          # Helper functions
+│   ├── data_loader.py    
+│   ├── model.py          
+│   ├── train.py          
+│   ├── evaluate.py       
+│   └── utils.py          
 ├── notebooks/
 │   └── CrossAttn_DeepHybridCPI_Training.ipynb
 ├── scripts/
-│   ├── train_model.py    # Training script
-│   ├── evaluate_model.py # Evaluation script
-│   └── run_ablation.py   # Ablation study script
+│   ├── train_model.py    
+│   ├── evaluate_model.py 
+│   └── run_ablation.py   
 └── tests/
     ├── __init__.py
-    └── test_model.py     # Unit tests
+    └── test_model.py     
 
 ### Citation
 CrossAttn-DeepHybridCPI: Bidirectional Cross-Attention Deep Hybrid Model for Compound-Protein Interaction Prediction
