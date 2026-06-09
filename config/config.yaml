@@ -1,0 +1,40 @@
+
+data:
+  data_path: "data.txt"
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+  random_seed: 42
+
+model:
+  name: "CrossAttnDeepHybridCPI"
+  compound_input_dim: 87
+  compound_out_dim: 640
+  protein_embed_dim: 640
+  cross_attn_heads: 8
+  cross_attn_dropout: 0.1
+  num_classes: 2
+  mgnn_growth_rate: 32
+  mgnn_block_config: [8, 8, 8]
+
+training:
+  batch_size: 16
+  learning_rate: 0.0001
+  epochs: 100
+  optimizer: "AdamW"
+  criterion: "CrossEntropyLoss"
+
+esm:
+  model_name: "esm2_t30_150M_UR50D"
+  use_gpu: true
+  cache_path: "esm2_embeddings_cache.pt"
+
+evaluation:
+  metrics: ["accuracy", "precision", "recall", "f1", "auc"]
+  bootstrap_runs: 5
+  bootstrap_subsample_ratio: 0.8
+
+visualization:
+  save_plots: true
+  plot_format: "jpg"
+  dpi: 300
