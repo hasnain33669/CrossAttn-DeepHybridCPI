@@ -1,11 +1,9 @@
 # CrossAttn-DeepHybridCPI
-# CrossAttn-DeepHybridCPI
 
 **Bidirectional Cross-Attention Deep Hybrid Model for Compound-Protein Interaction Prediction**
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ## Overview
 
@@ -21,8 +19,6 @@ CrossAttn-DeepHybridCPI is a deep learning framework for predicting compound-pro
 - Python 3.8 or higher
 - CUDA-capable GPU 
 ### requirements.txt
-
-```txt
 torch>=2.0.0
 torch-geometric>=2.3.0
 pandas>=1.5.0
@@ -37,7 +33,8 @@ transformers>=4.30.0
 umap-learn>=0.5.5
 pyyaml>=6.0
 
-### Setup
+
+## Setup
 
 # Create virtual environment
 python -m venv venv
@@ -74,8 +71,7 @@ CrossAttn-DeepHybridCPI/
 │   └── CrossAttn_DeepHybridCPI_Training.ipynb
 ├── scripts/
 │   ├── train_model.py    
-│   ├── evaluate_model.py 
-│   └── run_ablation.py   
+│   ├── evaluate_model.py   
 └── tests/
     ├── __init__.py
     └── test_model.py     
